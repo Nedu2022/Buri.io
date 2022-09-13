@@ -33,6 +33,10 @@ body {
   scroll-behavior: smooth;
 }
 
+i {
+  cursor: pointer;
+}
+
 /* ::-webkit-scrollbar {
   width: .6rem;
   background-color: transparent;
@@ -213,7 +217,7 @@ section {
   font-size: 1.5rem;
   width: 1.9rem;
   height: 1.9rem;
-  border-radius: 50%;
+  border-radius: 18%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -589,13 +593,13 @@ section {
   transform: translateY(100);
 }
 
-.product .product-list {
+.shop{
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 
-.product .product-list .product-box {
+.shop .item {
   padding: 2rem;
   background: #fff;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -603,16 +607,24 @@ section {
   text-align: center;
   flex: 1 1 30rem;
   position: relative;
+  width: 100%;
+  max-width: 50rem;
 }
 
-.product .product-list .product-box .product-img {
-  height: 25rem;
+.shop .item img {
   object-fit: cover;
   width: 100%;
+  height: 22rem;
   border-radius: .5rem;
 }
 
-.product .product-list .product-box .product-price {
+.shop .item .details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.shop .item .details .product-price {
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -620,15 +632,35 @@ section {
   color: #fff;
   padding: .9rem 1.4rem;
   border-radius: .5rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
-.product .product-list .product-box .product-title {
+.shop .item .details .product-title {
   color: #333;
   font-size: 2.3rem;
   padding-top: 1rem;
 }
 
+.shop .item .details .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.shop .item .details .buttons .bi-dash-lg {
+  color: red;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.shop .item .details .buttons .bi-plus-lg{
+  color: green;
+  font-size: 2rem;
+  font-weight: 800;
+}
 /* .shop-container .box-container .box .stars i {
   color: gold;
   font-size: 1.5rem;
