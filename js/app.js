@@ -4,6 +4,8 @@
  const cartIcon = document.querySelector("#cart-icon");
  const viewCart = document.querySelector(".view-cart");
  const closeCart = document.querySelector("#cart-close");
+ const label = document.getElementById("label");
+ const shoppingCart = document.getElementById("shopping-cart");
 // // const modal = document.querySelector(".existing");
 // const spanClose = document.getElementById("exist-close");
 // // const emptyCart = document.querySelector(".empty_cart");
@@ -35,99 +37,6 @@ menuIcon.addEventListener("click", () => {
 let shop = document.getElementById("shop");
 
 
-let shopItemsData = [
-  {
-      id : "first",
-      name : "Tasty Burger",
-      price : 12.20,
-      img : "images/Hamburger.jpg"
-  },
-  {
-      id : "second",
-      name  : "Tasty cakes",
-      price : 25.00,
-      img : "images/cake.jpg"
-  },
-  {
-      id : "third",
-      name : "Tasty sweets",
-      price : 6.25,
-      img : "images/sweet-2.jpg"
-  },
-  { 
-      id : "fourth",
-      name : "Tasty cupcakes",
-      price : 9.99,
-      img : "images/cupcake.jpg"
-  },
-  {
-      id : "fifth",
-      name : "Cold drinks",
-      price : 15.25,
-      img : "images/chilled drink.jpg"
-  },
-  {
-      id : "six",
-      name : "Cold ice-cream",
-      price : 8.00,
-      img : "images/cone-cream.jpg"
-  },
-  {
-      id : "seventh",
-      name : "Cushion",
-      price : 5.50,
-      img : "/images/g-1.jpg"
-  },
-  {
-      id : "eight",
-      name : "Desk",
-      price : 25.00,
-      img : "/images/g-2.jpg"
-  },
-  {
-      id : "nineth",
-      name : "Drawer",
-      price : 49.00,
-      img : "/images/g-3.jpg"
-  },
-  {
-      id : "tenth",
-      name : "Office chair",
-      price : 60.99,
-      img : "/images/g-4.jpg"
-  },
-  {
-      id : "eleven",
-      name : "Scissors chair",
-      price : 69.20,
-      img : "/images/g-5.jpg"
-  },
-  {
-      id : "twelve",
-      name : "Sleeper sofa",
-      price : 224.99,
-      img : "/images/g-6.jpg"
-  },
-  {
-      id : "thriteen",
-      name : "Sleigh bed",
-      price : 90.25,
-      img : "/images/g-7.jpg"
-  },
-  {
-      id : "fourteen",
-      name : "Sofa bed",
-      price : 99.99,
-      img : "/images/g-8.jpg"
-  },
-  {
-      id : "fifteen",
-      name : "White armchair",
-      price : 75.80,
-      img : "/images/g-9.jpg"
-  },
-]
-
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = () => {
@@ -135,15 +44,15 @@ let generateShop = () => {
     let {id, name, price, img } = x;
     let search = basket.find ((x) => x.id === id) || []
     return `
-    <div id=product-id-${id} class="item">
+  <div id=product-id-${id} class="item">
     <img src="${img}" alt="" class="product-img">
-    <div class="details">
+     <div class="details">
         <h3 class="product-title">${name}</h3>
-        <span class="product-price">$${price}</span>
+        <span class="product-price">${price}</span>
         <div class="buttons">
-          <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+          <button onclick="decrement(${id})" class="remove-cart">Remove item</button>
           <div id=${id} class="quantity">${search.item === undefined? 0 : search.item}</div>
-          <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+          <button onclick="increment(${id})" class="add-cart">Add to cart</button>
         </div>
       </div>
   </div>
@@ -171,7 +80,6 @@ let increment = (id) => {
   update(selectedItem.id);
   localStorage.setItem("data", JSON.stringify(basket));
 };
-
 
 let decrement = (id) => {
   let selectedItem = id;
@@ -202,6 +110,17 @@ let calculation = () => {
 };
 
 calculation();
+
+
+
+let generateCartItems = () => {
+  if(basket.length !==0 ) {
+    console.log("b is not e");
+  } else {
+    shoppingCart.innerHTML = ``
+    label.innerHTML = `<h2>Cart is Empty</h2>`
+  }
+}
 
 // spanClose.addEventListener("click", () => {
 //   modal.style.display = "none";
