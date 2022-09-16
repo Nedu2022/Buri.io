@@ -18,9 +18,6 @@ cartIcon.addEventListener("click", () => {
   viewCart.classList.add("active");
 });
 
-closeCart.addEventListener("click", () => {
-  viewCart.classList.remove("active");
-});
 
 window.addEventListener("scroll", () => {
   let header = document.getElementById("header");
@@ -125,7 +122,6 @@ let generateCartItems = () => {
 // spanClose.addEventListener("click", () => {
 //   modal.style.display = "none";
 // });
-
 
 // // window.addEventListener('DOMContentLoaded', () => {
 // //   loadJSON();

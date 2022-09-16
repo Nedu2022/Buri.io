@@ -1,11 +1,24 @@
-let label = document.getElementById("label");
-let shoppingCart = document.getElementById("shopper");
+const menuIcon = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector(".navbar");
+const label = document.getElementById("label");
+const shoppingCart = document.getElementById("shopper");
+
+
+
+
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 window.addEventListener("scroll", () => {
-  let header = document.getElementById("header");
+  const header = document.getElementById("header");
   header.classList.toggle("fixed", this.window.scrollY > 0);
 });
+
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.toggle("change");
+  navbar.classList.toggle("active");
+});
+
+
 
 let calculation = () => {
   let cartIcon = document.getElementById("cart-count-info");
@@ -32,7 +45,7 @@ let generateCartItems = () => {
     <div class="item">
     <i onclick="removeItem(${id})" class="bi bi-trash"></i>
 
-     <img src="${img}" alt="" />
+     <img src="${img}" alt="image" />
 
    
       <div class="title-price-x">
@@ -129,6 +142,12 @@ let clearCart = () => {
   calculation();
 };
 
+let checkIn = () => {
+
+}
+
+
+
 let TotalAmount = () => {
   if (basket.length !== 0) {
     let amount = basket
@@ -145,7 +164,9 @@ let TotalAmount = () => {
     <span> ₦${amount}</span>
     </div>
     <div class="bottom-btn">
-    <button class="checkout">Checkout</button>
+    
+
+    <button onclick="successModal()" class="checkout">Checkout</button> 
     <button onclick="clearCart()" class="removeAll">Clear Cart</button>
     </div>
     `;
@@ -153,3 +174,24 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
+
+
+function successModal() {
+  const Toast = Swal.mixin({
+    toast: false,
+    position: 'center',
+    showConfirmButton: true,
+  });
+
+  Toast.fire({
+    title: "Successful!",
+    text: "Your order is on the way",
+    icon: "success",
+  });
+  // clearCart();
+}
+
+
+
+
+
