@@ -1,10 +1,7 @@
-const menuIcon = document.querySelector(".hamburger-menu");
+// const menuIcon = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector(".navbar");
 const label = document.getElementById("label");
 const shoppingCart = document.getElementById("shopper");
-
-
-
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -12,12 +9,6 @@ window.addEventListener("scroll", () => {
   const header = document.getElementById("header");
   header.classList.toggle("fixed", this.window.scrollY > 0);
 });
-
-menuIcon.addEventListener("click", () => {
-  menuIcon.classList.toggle("change");
-  navbar.classList.toggle("active");
-});
-
 
 
 let calculation = () => {
@@ -31,13 +22,20 @@ let generateCartItems = () => {
   if (basket.length !== 0) {
     return (shoppingCart.innerHTML = basket
       .map(x => {
-        let { id, item } = x;
+        let {
+          id,
+          item
+        } = x;
         let search = shopItemsData.find(y => y.id === id) || [];
-        let { img, name, price } = search;
+        let {
+          img,
+          name,
+          price
+        } = search;
 
         return `
       
-      <div class="title">
+    <div class="title">
       Shopping Item
     </div>
 
@@ -142,17 +140,16 @@ let clearCart = () => {
   calculation();
 };
 
-let checkIn = () => {
-
-}
-
-
+let checkIn = () => {};
 
 let TotalAmount = () => {
   if (basket.length !== 0) {
     let amount = basket
       .map(x => {
-        let { item, id } = x;
+        let {
+          item,
+          id
+        } = x;
         let search = shopItemsData.find(y => y.id === id) || [];
         return parseFloat((item * search.price).toFixed(2));
       })
@@ -175,23 +172,17 @@ let TotalAmount = () => {
 
 TotalAmount();
 
-
 function successModal() {
   const Toast = Swal.mixin({
     toast: false,
-    position: 'center',
-    showConfirmButton: true,
+    position: "center",
+    showConfirmButton: true
   });
 
   Toast.fire({
     title: "Successful!",
     text: "Your order is on the way",
-    icon: "success",
+    icon: "success"
   });
-  // clearCart();
+  clearCart();
 }
-
-
-
-
-
