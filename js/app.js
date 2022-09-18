@@ -37,7 +37,7 @@
          id,
          name,
          price,
-         img
+         img,
        } = x;
        let search = basket.find((x) => x.id === id) || []
        return `
@@ -59,6 +59,7 @@
  };
 
  generateShop();
+
 
  let increment = (id) => {
    let selectedItem = id;

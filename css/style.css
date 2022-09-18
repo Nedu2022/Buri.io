@@ -13,7 +13,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   list-style: none;
 }
 
@@ -27,6 +26,7 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 6rem;
   scroll-behavior: smooth; 
+
 }
 
 body {
@@ -745,6 +745,7 @@ section {
   background-color: var(--red);
 }
 
+
 .text-center {
   display: flex;
   align-items: center;
@@ -790,7 +791,11 @@ section {
   color: #5e6977;
   font-size: 18px;
   font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 13rem;
 }
+
 
 #shopper .item {
   padding: 10px;
@@ -798,7 +803,8 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
   border-bottom: 1px solid #e1e8ee;
 }
 
