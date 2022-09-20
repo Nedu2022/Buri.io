@@ -49,8 +49,8 @@ let generateCartItems = () => {
         </button>
       </div>
    
-      <h3 class="total-price">₦${price}</h3>
-      <h3 class="update-price">₦${item * price}</h3>
+      <h3 class="total-price">₦${price}.00</h3>
+      <h3 class="update-price">₦${item * price}.00</h3>
     </div>
    
       `;

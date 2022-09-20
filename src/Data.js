@@ -2,37 +2,37 @@ let shopItemsData = [{
         id: "first",
         name: "Tasty Burger",
         price: 2500,
-        img: "images/Hamburger.jpg"
+        img: "/images/Hamburger.jpg"
     },
     {
         id: "second",
         name: "Tasty cakes",
         price: 10000,
-        img: "images/cake.jpg"
+        img: "/images/cake.jpg"
     },
     {
         id: "third",
         name: "Tasty sweets",
         price: 1000,
-        img: "images/sweet-2.jpg"
+        img: "/images/sweet-2.jpg"
     },
     {
         id: "fourth",
         name: "Tasty cupcakes",
         price: 3000,
-        img: "images/cupcake.jpg"
+        img: "/images/cupcake.jpg"
     },
     {
         id: "fifth",
         name: "Cold drinks",
         price: 5000,
-        img: "images/chilled drink.jpg"
+        img: "/images/chilled drink.jpg"
     },
     {
         id: "six",
         name: "Ice-cream",
         price: 3500,
-        img: "images/cone-cream.jpg"
+        img: "/images/cone-cream.jpg"
     },
     {
         id: "seventh",

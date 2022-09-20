@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +14,7 @@
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- custom css file link  -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/src/style.css">
 
   <!-- bootstrap cdn link  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"
@@ -54,7 +55,7 @@
         <a href="#review">Review</a>
       </nav>
 
-      <a href="/cart.html">
+      <a href="/src/cart.html">
         <button type="button" id="cart-btn">
           <i class="bi bi-cart3" id="cart-icon"></i>
           <span id="cart-count-info">0</span>
@@ -78,7 +79,7 @@
     </div>
 
     <div class="image">
-      <img src="images/home-img.png" alt="">
+      <img src="/images/home-img.png" alt="">
     </div>
   </section>
   <!-- home section ends -->
@@ -163,7 +164,143 @@
   <!-- product section starts -->
   <section class="product" id="product">
     <h1 class="heading">Most <span>Popular</span> foods </h1>
-    <div class="shop" id="shop"></div>
+    <div class="shop" id="shop">
+
+      <div class="item">
+        <img src="/images/Hamburger.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Tasty Burger</h3>
+          <span class="product-price">₦2,500</span>
+          <a onclick="increment" class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/cake.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Tasty cakes</h3>
+          <span class="product-price">₦10,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/sweet-2.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Tasty sweets</h3>
+          <span class="product-price">₦1,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/cupcake.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Tasty cupcakes</h3>
+          <span class="product-price">₦3,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/chilled drink.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Cold drinks</h3>
+          <span class="product-price">₦5,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/cone-cream.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Ice-cream</h3>
+          <span class="product-price">₦3,500</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-1.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Omelette</h3>
+          <span class="product-price">₦4,800</span>
+          <a onclick="increment" class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-2.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Cookies</h3>
+          <span class="product-price">₦6,500</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-3.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Chicken and Fries</h3>
+          <span class="product-price">₦7,500</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-4.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Spaghetti</h3>
+          <span class="product-price">₦5,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-5.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Chocolate Cake</h3>
+          <span class="product-price">₦5,000</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-6.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Shawarma</h3>
+          <span class="product-price">₦2,500</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-7.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Biscuit ice-cream</h3>
+          <span class="product-price">₦9,200</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-8.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Sandwinch</h3>
+          <span class="product-price">₦7700</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/g-9.jpg" alt="">
+        <div class="details">
+          <h3 class="product-title">Burger</h3>
+          <span class="product-price">₦4,800</span>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- product section ends -->
 
@@ -200,7 +337,7 @@
     <div class="row">
 
       <div class="image">
-        <img src="images/about-img.png" alt="">
+        <img src="/images/about-img.png" alt="">
       </div>
 
       <div class="content">
@@ -341,8 +478,8 @@
   <!-- footer section ends -->
 
   <!-- custom js file link -->
-  <script src="/js/Data.js" async></script>
-  <script src="/js/app.js" async></script>
+  <script src="/src/Data.js"></script>
+  <script src="/src/app.js"></script>
 </body>
 
 </html>
