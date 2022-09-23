@@ -26,11 +26,7 @@ let generateCartItems = () => {
         let { img, name, price } = search;
 
         return `
-      
-    <div class="title">
-      Shopping Item
-    </div>
-   
+    
     <div class="item">
     <i onclick="removeItem(${id})" class="bi bi-trash"></i>
      <img src="${img}" alt="image" />
@@ -41,11 +37,13 @@ let generateCartItems = () => {
    
       <div class="ons">
         <button class="plus-btn" type="button" name="button">
-        <i onclick="decrement(${id})"  class="bi bi-dash-lg"></i>
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
         </button>
+        
         <div id=${id} class="quantity"> ${item} </div>
+
         <button class="minus-btn" type="button" name="button">
-        <i onclick="increment(${id})"  class="bi bi-plus-lg"></i>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
         </button>
       </div>
    
@@ -143,7 +141,7 @@ let TotalAmount = () => {
     label.innerHTML = `
     <div class="bill">
     <h2>Total Bill :</h2>
-    <span> ₦${amount}</span>
+    <span> ₦${amount}.00</span>
     </div>
     <div class="bottom-btn">
     
