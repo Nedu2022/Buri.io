@@ -29,7 +29,7 @@ let generateCartItems = () => {
     
     <div class="item">
     <i onclick="removeItem(${id})" class="bi bi-trash"></i>
-     <img src="${img}" alt="image" />
+     <img src="/src${img}" loading="lazy" decoding="async" alt="image" />
    
       <div class="title-price-x">
         <h4>${name}</h4>
@@ -57,7 +57,7 @@ let generateCartItems = () => {
   } else {
     shoppingCart.innerHTML = ``;
     label.innerHTML = `
-    <img src="/images/cart.668e6453.svg" class="label-img" alt="">
+    <img src="/src/images/cart.668e6453.svg" class="label-img" alt="">
     <div>
       <h2>Your cart is empty</h2>
       <a href="index.html">

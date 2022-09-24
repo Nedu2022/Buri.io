@@ -284,7 +284,7 @@ section {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background: url(../images/home-bg.jpg) no-repeat;
+  background: url(../src/images/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -778,8 +778,12 @@ section {
 
 #shopper {
   display: flex;
-  width: 100%;  
+  width: 70%;
   flex-wrap: wrap;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background: rgba(82, 82, 82, 0.05);
+  border-radius: 1rem;
 }
 
 #shopper .title {
@@ -970,15 +974,16 @@ section {
     background: #fff;
   }
 
-  /* #shopper {
-    margin: 11rem 1rem;
+  #shopper {
+    width: 100%;
+    /* margin: 11rem 1rem;
     background: #ffffff;
     box-shadow: 1px 2px 3px 0px rgb(0 0 0 / 10%);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    } */
+    justify-content: center; */
+    }
 
   .cart {
     width: 30vw;
