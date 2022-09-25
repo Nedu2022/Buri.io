@@ -2,7 +2,7 @@
 
 :root {
   --red: #ff3838;
-  --black:#192a56;
+  --black: #192a56;
 }
 
 * {
@@ -14,7 +14,7 @@
   border: none;
   text-decoration: none;
   list-style: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 *::selection {
@@ -26,7 +26,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 6rem;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 
 }
 
@@ -305,6 +305,7 @@ section {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0rem);
@@ -355,6 +356,7 @@ section {
   text-align: center;
   background: #fff;
   padding: 2rem;
+  height: 100%;
 }
 
 .speciality .box-container .box .content img {
@@ -504,10 +506,10 @@ section {
   padding: 1rem;
 }
 
-.about .row{
+.about .row {
   display: flex;
   flex-wrap: wrap;
-  gap:1.5rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -518,58 +520,58 @@ section {
   color: var(--red);
 }
 
-.about .row .image{
-  flex:1 1 45rem;
+.about .row .image {
+  flex: 1 1 45rem;
 }
 
-.about .row .image img{ 
+.about .row .image img {
   width: 100%;
 }
 
-.about .row .content{
-  flex:1 1 45rem;
+.about .row .content {
+  flex: 1 1 45rem;
 }
 
-.about .row .content h3{
-  color:var(--black);
+.about .row .content h3 {
+  color: var(--black);
   font-size: 4rem;
-  padding:.5rem 0;
+  padding: .5rem 0;
 }
 
-.about .row .content p{
+.about .row .content p {
   font-size: 1.5rem;
-  padding:.5rem 0;
+  padding: .5rem 0;
   line-height: 2;
 }
 
-.about .row .content .icons-container{
+.about .row .content .icons-container {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  padding:1rem 0;
+  padding: 1rem 0;
   margin-top: .5rem;
 }
 
-.about .row .content .icons-container .icons{
-  background:#eee;
+.about .row .content .icons-container .icons {
+  background: #eee;
   border-radius: .5rem;
-  border:.1rem solid rgba(0,0,0,.2);
+  border: .1rem solid rgba(0, 0, 0, .2);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:1rem;
-  flex:1 1 17rem;
-  padding:1.5rem 1rem;
+  gap: 1rem;
+  flex: 1 1 17rem;
+  padding: 1.5rem 1rem;
 }
 
-.about .row .content .icons-container .icons i{
+.about .row .content .icons-container .icons i {
   font-size: 2.5rem;
-  color:var(--red);
+  color: var(--red);
 }
 
-.about .row .content .icons-container .icons span{
+.about .row .content .icons-container .icons span {
   font-size: 1.5rem;
-  color:var(--black);
+  color: var(--black);
 }
 
 
@@ -875,7 +877,7 @@ section {
   font-weight: 300;
 }
 
-#shopper .update-price{
+#shopper .update-price {
   text-align: center;
   font-size: 1.6rem;
   color: #000;
@@ -983,7 +985,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center; */
-    }
+  }
 
   .cart {
     width: 30vw;
@@ -1000,13 +1002,13 @@ section {
     width: 22%;
     height: 57%;
     object-fit: cover;
-}
+  }
 
-.swal2-popup.swal2-modal.swal2-icon-success.swal2-show {
-  display: flex;
-  margin: 0;
-  width: 93%;
-}
+  .swal2-popup.swal2-modal.swal2-icon-success.swal2-show {
+    display: flex;
+    margin: 0;
+    width: 93%;
+  }
 
   .order .row form .inputBox input {
     width: 100%;
@@ -1056,53 +1058,53 @@ section {
     font-size: 4.1rem;
     color: #333;
   }
- 
 
-#shopper .item {
-  padding: 10px;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #e1e8ee;
+
+  #shopper .item {
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e8ee;
   }
 
-#shopper .item img {
-  width: 19%;
-  height: 57%;
-  object-fit: cover;
+  #shopper .item img {
+    width: 19%;
+    height: 57%;
+    object-fit: cover;
   }
 
-#shopper .ons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.3rem;
+  #shopper .ons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
   }
 
-#shopper button[class*="btn"] {
-  width: 15px;
-  height: 15px;
-  background-color: #e1e8ee;
-  border-radius: 3px;
-  border: none;
-  cursor: pointer;
+  #shopper button[class*="btn"] {
+    width: 15px;
+    height: 15px;
+    background-color: #e1e8ee;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
   }
 
-#shopper .total-price {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #43484d;
-  font-weight: 300;
+  #shopper .total-price {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #43484d;
+    font-weight: 300;
   }
 
-#shopper .update-price {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #000;
-  font-weight: 600;
+  #shopper .update-price {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
   }
 }
 
