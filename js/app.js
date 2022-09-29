@@ -34,7 +34,7 @@ let generateShop = () => {
       let search = basket.find(x => x.id === id) || [];
       return `
   <div id=product-id-${id} class="item">
-    <img src="/src${img}" loading="lazy" decoding="async" alt="" class="product-img">
+    <img src="${img}" loading="lazy" decoding="async" alt="" class="product-img">
      <div class="details">
         <h3 class="product-title">${name}</h3>
         <span class="product-price">₦${price}.00</span>
