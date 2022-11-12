@@ -108,3 +108,20 @@ let generateCartItems = () => {
     label.innerHTML = `<h2>Cart is Empty</h2>`;
   }
 };
+
+
+const sr = ScrollReveal({
+  origin: 'bottom',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  // reset: true
+})
+
+ScrollReveal().reveal(`.content`, {origin: 'left', delay: 600})
+ScrollReveal().reveal(`.image`, {origin: 'right', delay: 700})
+ScrollReveal().reveal(`.product-img`, {origin: 'right', delay: 700})
+ScrollReveal().reveal(`.box-container`, {origin: 'bottom', delay: 1200})
+ScrollReveal().reveal(`.item`, {origin: 'bottom', delay: 1500})
+ScrollReveal().reveal(`.image-food`, {origin: 'left', delay: 1200})
+ScrollReveal().reveal(`.content-food`, {origin: 'right', delay: 1200})

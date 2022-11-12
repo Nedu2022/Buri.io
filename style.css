@@ -520,31 +520,31 @@ section {
   color: var(--red);
 }
 
-.about .row .image {
+.about .row .image-food {
   flex: 1 1 45rem;
 }
 
-.about .row .image img {
+.about .row .image-food img {
   width: 100%;
 }
 
-.about .row .content {
+.about .row .content-food {
   flex: 1 1 45rem;
 }
 
-.about .row .content h3 {
+.about .row .content-food h3 {
   color: var(--black);
   font-size: 4rem;
   padding: .5rem 0;
 }
 
-.about .row .content p {
+.about .row .content-food p {
   font-size: 1.5rem;
   padding: .5rem 0;
   line-height: 2;
 }
 
-.about .row .content .icons-container {
+.about .row .content-food .icons-container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -552,7 +552,7 @@ section {
   margin-top: .5rem;
 }
 
-.about .row .content .icons-container .icons {
+.about .row .content-food .icons-container .icons {
   background: #eee;
   border-radius: .5rem;
   border: .1rem solid rgba(0, 0, 0, .2);
@@ -564,12 +564,12 @@ section {
   padding: 1.5rem 1rem;
 }
 
-.about .row .content .icons-container .icons i {
+.about .row .content-food .icons-container .icons i {
   font-size: 2.5rem;
   color: var(--red);
 }
 
-.about .row .content .icons-container .icons span {
+.about .row .content-food .icons-container .icons span {
   font-size: 1.5rem;
   color: var(--black);
 }
@@ -616,6 +616,19 @@ section {
   font-size: 1.7rem;
   color: #fff;
   padding: 1rem 0;
+}
+
+/* Swiper class */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .subscribe {
