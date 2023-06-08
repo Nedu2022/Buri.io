@@ -524,7 +524,7 @@ section {
   flex: 1 1 45rem;
 }
 
-.about .row .image-food img {
+.about .row .image-food  img {
   width: 100%;
 }
 
